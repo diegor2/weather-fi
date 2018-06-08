@@ -1,6 +1,6 @@
-# Wheather-fi
+# Weather-fi
 
-Broadcast the wheather as wifi ssid on a ESP8266
+Broadcast the weather as wifi ssid on a ESP8266
 
 ![Demo](demo.jpg)
 
