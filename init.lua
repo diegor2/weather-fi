@@ -1,10 +1,10 @@
 local icon = require "icon"
-local secrets = require "secrets"
+local settings = require "settings"
 local weather = require "weather"
 
 local function config_dns()
-    net.dns.setdnsserver(secrets.dns.primary, 0)
-    net.dns.setdnsserver(secrets.dns.secondary, 1)
+    net.dns.setdnsserver(settings.dns.primary, 0)
+    net.dns.setdnsserver(settings.dns.secondary, 1)
 end
 
 local function config_broadcast(ssid_name)
@@ -46,8 +46,8 @@ end
 
 local function connect_station()
     wifi.sta.config({
-        ssid = secrets.station.ssid,
-        pwd = secrets.station.password,
+        ssid = settings.station.ssid,
+        pwd = settings.station.password,
         save = false
     })
 end

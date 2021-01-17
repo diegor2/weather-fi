@@ -1,9 +1,9 @@
-local secrets = require "secrets"
+local settings = require "settings"
 
-local q = secrets.openweathermap.location
-local k = secrets.openweathermap.key
-local u = secrets.openweathermap.units
-local l = secrets.openweathermap.language
+local q = settings.openweathermap.location
+local k = settings.openweathermap.key
+local u = settings.openweathermap.units
+local l = settings.openweathermap.language
 
 local url = "http://api.openweathermap.org/data/2.5/weather?q=" .. q .. "&appid=" .. k .. "&units=" .. u .. "&lang=" .. l
 
