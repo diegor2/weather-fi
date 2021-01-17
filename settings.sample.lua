@@ -32,5 +32,8 @@ return {
     dns = {
         primary = "8.8.8.8",
         secondary = "8.8.4.4",
-    }
+    },
+    
+    -- Update every 15 minutes
+    watch_dog = 60 * 15,
 }

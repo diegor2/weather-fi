@@ -56,3 +56,5 @@ print("Starting...")
 
 init_wifi()
 connect_station()
+
+tmr.softwd(settings.watch_dog)
