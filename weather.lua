@@ -9,7 +9,7 @@ local url = "http://api.openweathermap.org/data/2.5/weather?q=" .. q .. "&appid=
 
 local function fetch(on_weather_data)
     http.get(url, nil, function(code, data)
-            if (code < 0) then
+            if code < 0 then
                 print("HTTP request failed")
             else
                 response = sjson.decode(data)

@@ -18,18 +18,18 @@ local function config_broadcast(ssid_name)
 end
 
 local function on_weather_data(data)
-    if (data ~= nil) then
-        print("icon: " , data.weather[1].icon)
-        print("name: " , data.name)
-        print("temp: " , data.main.temp)
+    if data ~= nil then
+        code = data.weather[1].icon
+        emoji = icon.by_code[code]
 
-        emoji = icon.by_code[data.weather[1].icon]
+        name = data.name
+        if #name > 20 then name = name.sub(0, 20) end
 
-        print("emoji: ", emoji)
+        temp = data.main.temp
 
-        ssid = string.format("%s %d° %s", data.name, data.main.temp, emoji)
+        ssid = string.format("%s %d° %s", name, temp, emoji)
+
         config_broadcast(ssid)
-        print(ssid)
     end
 end
 
