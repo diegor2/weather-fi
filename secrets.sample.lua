@@ -11,15 +11,6 @@ return {
 
     },
 
-    -- Settings for acting as an access point
-    access_point = {
-
-        -- since it creates a new access point which will act as a bridge to existing network, 
-        -- better add a password to it
-        password = "password123",
-
-    },
-
     -- Settings for the weather provider
     openweathermap = {
 

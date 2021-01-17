@@ -8,11 +8,8 @@ local function config_dns()
 end
 
 local function config_broadcast(ssid_name)
-    wifi.ap.config({
-        ssid = ssid_name, 
-        pwd = secrets.station.password,
-        auth = wifi.WPA2_PSK
-    })
+    wifi.setmode(wifi.SOFTAP)
+    wifi.ap.config({ssid = ssid_name})
 
     print("Broadcasting SSID: " .. ssid_name)
 end
@@ -40,7 +37,7 @@ local function on_got_ip(ip)
 end
 
 local function init_wifi()
-    wifi.setmode(wifi.STATIONAP)
+    wifi.setmode(wifi.STATION)
     wifi.eventmon.register(
         wifi.eventmon.STA_GOT_IP, 
         function (event) on_got_ip(event.IP) end
