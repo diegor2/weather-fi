@@ -25,7 +25,7 @@ return {
 
         -- Language: https://openweathermap.org/current#multi
         language = "pt_br",
-        
+
     },
 
     -- Name servers to resolve hostnames
@@ -33,7 +33,7 @@ return {
         primary = "8.8.8.8",
         secondary = "8.8.4.4",
     },
-    
+
     -- Update every 15 minutes
     watch_dog = 60 * 15,
 }

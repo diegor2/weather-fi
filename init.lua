@@ -31,7 +31,7 @@ local function on_weather_data(data)
 end
 
 local function on_got_ip(ip)
-    print("Connected as: " .. ip) 
+    print("Connected as: " .. ip)
     config_dns()
     weather.fetch(on_weather_data)
 end
@@ -39,7 +39,7 @@ end
 local function init_wifi()
     wifi.setmode(wifi.STATION)
     wifi.eventmon.register(
-        wifi.eventmon.STA_GOT_IP, 
+        wifi.eventmon.STA_GOT_IP,
         function (event) on_got_ip(event.IP) end
     )
 end

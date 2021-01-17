@@ -1,17 +1,17 @@
 -- weather emojis
 local names = {
     -- day
-    
+
     day_clear_sky = "☀️",
     day_few_clouds = "☀️☁️",
-    
+
     -- night
-    
+
     night_clear_sky = "🌙",
     night_few_clouds = "🌙☁️",
-    
+
     -- generic
-    
+
     scattered_clouds = "☁️",
     broken_clouds = "☁️☁️",
     shower_rain = "🌧️",

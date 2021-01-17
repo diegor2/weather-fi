@@ -19,8 +19,6 @@ local function fetch(on_weather_data)
     )
 end
 
-print(http)
-
 return {
     fetch = fetch
 }
